@@ -17,6 +17,12 @@ public class DoAdapter extends RecyclerView.Adapter<DoAdapter.ViewHolder> {
     //Инфлейтер
     LayoutInflater inflater;
 
+    //Динамическое добавление нового действия
+    public void addDo(String text){
+        doList.add(text);
+        notifyItemInserted(doList.size()-1);
+    }
+
     @NonNull
     @Override
     public DoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
