@@ -32,5 +32,8 @@ public class MainActivity extends AppCompatActivity {
         //Инициализация переменных для элементов разметки
         doList = findViewById(R.id.do_list_rv);
         addDo = findViewById(R.id.add_do_btn);
+
+        //Заполнение списка
+        doList.setAdapter(new DoAdapter(adapterList, this));
     }
 }
