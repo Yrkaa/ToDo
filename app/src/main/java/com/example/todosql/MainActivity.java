@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Инициализация адаптера
-        adapter = new DoAdapter(adapterList, this);
+        adapter = new DoAdapter(adapterList, this, db);
 
         //Заполнение списка
         doList.setAdapter(adapter);
