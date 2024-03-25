@@ -62,9 +62,11 @@ public class DoAdapter extends RecyclerView.Adapter<DoAdapter.ViewHolder> {
                         int id = c.getInt(0);
                         db.execSQL("DELETE FROM Do WHERE _id="+id);
                         db.execSQL("UPDATE Do SET _id = _id - 1 WHERE _id >"+id);
+                        break;
                     }
                     count++;
                 }
+                c.close();
             }
         });
     }
